@@ -1,10 +1,10 @@
 <template>
     <div class="header-container">
-        <img src="../../../images/rick-and-morti-logo.png" alt="логотип рик и морти" class="header-logo">
+        <img src="./../../assets/images/logo-rick.png" alt="логотип рик и морти" class="header-logo">
         <nav class="header-navigation">
             <ul class="navigation-list">
                 <li v-for="(item, index) in routes" :key="item.route">
-                    {{ item.name }}
+                    <RouterLink :to="item.route" class="nav-link">{{ item.name }}</RouterLink>
                 </li>
             </ul>
         </nav>
@@ -38,7 +38,7 @@ export default {
 .navigation-list {
     display: flex;
     justify-content: space-around;
-    width: clamp(500px, 600px, 800px);
+    width: clamp(300px, 400px, 600px);
 }
 
 .navigation-list {
@@ -46,7 +46,21 @@ export default {
 }
 
 .header-logo {
-    height: 30px;
-    width: 200px;
+    height: 80px;
+    width: 140px;
+    object-fit: contain;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #CCCCCC;
+    transition: color 0.2s ease, border 0.2s ease;
+
+}
+
+.nav-link:hover{
+    color: rgba(46, 255, 126, 0.7);
+    border-bottom: 1px solid rgba(46, 255, 126, 0.7);
+    padding-bottom: 2px; 
 }
 </style>

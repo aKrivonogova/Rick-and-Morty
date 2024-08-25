@@ -1,16 +1,15 @@
 <script>
-import Header from './views/Header/Header.vue'
-
+import Home from './views/Home/Home.vue'
 export default {
   name: 'App',
   components: {
-    Header
+    Home
   }
 }
 </script>
 
 <template>
-  <Header></Header>
+ <Home></Home>
 </template>
 
 <style scoped></style>

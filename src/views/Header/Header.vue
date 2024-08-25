@@ -17,7 +17,6 @@ export default {
 <style>
 .header {
     padding: 20px 40px;
-    background-color: rgb(45, 44, 43);
-    color: white;
+    background-color: #2d2d2d;
 }
 </style>
